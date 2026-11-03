@@ -75,4 +75,4 @@ mysql -u root -p < db/schema.sql
 This project combines a validated, responsive front end with a PHP/MySQL admin panel and a Java Servlet/JSP portal that share one database and one upload folder. Files are checked for size and real type, saved under unique names, and tracked in MySQL, so records and documents stay linked. The servlet layer adds JDBC retrieval, file streaming and session-based access control. Together they show how the same data can be managed in PHP and served securely in Java.
 
 ## GitHub
-Repository link: https://github.com/joepjoy
+Repository link: https://github.com/joepjoy/student-admission-portal
