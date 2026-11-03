@@ -1,0 +1,7 @@
+tools/node_modules/
+tools/package*.json
+make_report.py
+*.docx
+php/uploads/*
+!php/uploads/.htaccess
+servlet/target/

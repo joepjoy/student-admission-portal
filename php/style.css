@@ -1,0 +1,20 @@
+body{font-family:"Segoe UI",Arial,sans-serif;background:#eef2fb;margin:0;color:#1c2333}
+header{background:#1e5eff;color:#fff;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+header a{color:#fff;text-decoration:none;font-weight:600}
+.wrap{max-width:960px;margin:24px auto;padding:0 12px}
+.box{background:#fff;border-radius:12px;padding:24px;box-shadow:0 6px 24px rgba(30,50,120,.1)}
+table{width:100%;border-collapse:collapse}
+th,td{padding:10px;border-bottom:1px solid #e3e8f4;text-align:left;vertical-align:middle}
+th{background:#f3f6fd}
+.btn{display:inline-block;padding:7px 14px;border:0;border-radius:6px;background:#1e5eff;color:#fff;text-decoration:none;cursor:pointer;font-size:.9rem}
+.btn.del{background:#d93025}.btn.gray{background:#6b7488}.btn.green{background:#1e8e3e}
+.msg{padding:10px 14px;border-radius:8px;margin-bottom:14px;font-weight:600}
+.msg.ok{background:#e6f4ea;color:#1e8e3e}.msg.err{background:#fdecea;color:#d93025}
+.msg ul{margin:0;padding-left:18px}
+label{display:block;margin:14px 0 4px;font-weight:600}
+input[type=text],input[type=email],select{width:100%;padding:9px;border:1.5px solid #c9d2e6;border-radius:8px;box-sizing:border-box;font-size:1rem}
+.thumb{width:48px;height:48px;object-fit:cover;border-radius:50%;border:2px solid #c9d2e6}
+.photo{width:140px;height:140px;object-fit:cover;border-radius:12px;border:2px solid #c9d2e6}
+.row{display:flex;gap:24px;flex-wrap:wrap}.row>div{flex:1;min-width:240px}
+.files li{margin:6px 0}
+@media(max-width:600px){th:nth-child(4),td:nth-child(4){display:none}}

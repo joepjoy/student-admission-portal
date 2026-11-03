@@ -1,0 +1,93 @@
+/* ---------- Theme colours (CSS variables) ---------- */
+:root {
+  --primary: #1e5eff;
+  --primary-dark: #1546c4;
+  --bg: #eef2fb;
+  --text: #1c2333;
+  --border: #c9d2e6;
+  --danger: #d93025;
+  --ok: #1e8e3e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  padding: 24px 12px;
+}
+
+/* ---------- Card container ---------- */
+.card {
+  width: 100%;
+  max-width: 760px;
+  background: #fff;
+  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(30, 50, 120, .12);
+}
+h1 { margin: 0 0 4px; color: var(--primary); }
+.sub { margin: 0 0 24px; color: #5b6477; font-size: .95rem; }
+
+/* ---------- Responsive two-column grid ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 20px;
+}
+.field.full { grid-column: 1 / -1; }
+.field { display: flex; flex-direction: column; }
+
+label { font-weight: 600; margin-bottom: 6px; font-size: .9rem; }
+
+/* ---------- Styled inputs ---------- */
+input, select {
+  padding: 10px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fafbff;
+  transition: border-color .2s, box-shadow .2s;
+}
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(30, 94, 255, .18);
+}
+input.invalid, select.invalid { border-color: var(--danger); background: #fff6f5; }
+input.valid, select.valid     { border-color: var(--ok); }
+
+/* ---------- Error / success messages ---------- */
+.error { color: var(--danger); font-size: .8rem; min-height: 1.1em; margin-top: 4px; }
+.success {
+  margin-top: 16px; padding: 10px 14px; border-radius: 8px;
+  background: #e6f4ea; color: var(--ok); font-weight: 600;
+}
+
+/* ---------- Password strength meter ---------- */
+.meter { height: 6px; background: #e3e8f4; border-radius: 4px; margin-top: 8px; overflow: hidden; }
+#meterBar { height: 100%; width: 0; transition: width .25s, background .25s; }
+small#strengthText { font-size: .78rem; margin-top: 3px; color: #5b6477; }
+
+/* ---------- Buttons ---------- */
+.actions { display: flex; gap: 12px; margin-top: 24px; }
+.btn {
+  padding: 11px 26px; border: 0; border-radius: 8px; cursor: pointer;
+  background: var(--primary); color: #fff; font-size: 1rem; font-weight: 600;
+  transition: background .2s, transform .1s;
+}
+.btn:hover { background: var(--primary-dark); }
+.btn:active { transform: scale(.98); }
+.btn.secondary { background: #e3e8f4; color: var(--text); }
+.btn.secondary:hover { background: #d3daeb; }
+
+/* ---------- Mobile: single column ---------- */
+@media (max-width: 600px) {
+  .card { padding: 20px; }
+  .grid { grid-template-columns: 1fr; }
+  .actions { flex-direction: column; }
+}

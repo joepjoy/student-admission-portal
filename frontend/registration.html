@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- viewport meta tag makes the page responsive on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Student Registration</h1>
+    <p class="sub">KPR Institute of Engineering and Technology - Admission Portal</p>
+
+    <!-- novalidate: we show our own styled messages instead of browser pop-ups -->
+    <form id="regForm" action="../php/add.php" method="post" enctype="multipart/form-data" novalidate>
+
+      <div class="grid">
+        <div class="field">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" placeholder="e.g. Arun Kumar">
+          <span class="error" id="nameErr"></span>
+        </div>
+
+        <div class="field">
+          <label for="roll_no">Roll Number *</label>
+          <input type="text" id="roll_no" name="roll_no" placeholder="e.g. 21CS001">
+          <span class="error" id="roll_noErr"></span>
+        </div>
+
+        <div class="field">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com">
+          <span class="error" id="emailErr"></span>
+        </div>
+
+        <div class="field">
+          <label for="course">Course *</label>
+          <select id="course" name="course">
+            <option value="">-- Select course --</option>
+            <option>B.E. CSE</option>
+            <option>B.E. ECE</option>
+            <option>B.E. EEE</option>
+            <option>B.E. MECH</option>
+            <option>B.Tech IT</option>
+          </select>
+          <span class="error" id="courseErr"></span>
+        </div>
+
+        <div class="field">
+          <label for="password">Password *</label>
+          <input type="password" id="password" name="password" placeholder="Min 8 chars, A-Z, a-z, 0-9, symbol">
+          <!-- live strength meter -->
+          <div class="meter"><div id="meterBar"></div></div>
+          <small id="strengthText"></small>
+          <span class="error" id="passwordErr"></span>
+        </div>
+
+        <div class="field">
+          <label for="confirm">Confirm Password *</label>
+          <input type="password" id="confirm" name="confirm">
+          <span class="error" id="confirmErr"></span>
+        </div>
+
+        <div class="field full">
+          <label for="photo">Profile Photo * (JPG or PNG, max 2 MB)</label>
+          <input type="file" id="photo" name="profile_image" accept=".jpg,.jpeg,.png">
+          <span class="error" id="photoErr"></span>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn">Register</button>
+        <button type="reset" class="btn secondary" id="resetBtn">Reset</button>
+      </div>
+      <p class="success" id="okMsg" hidden>All fields are valid - form submitted.</p>
+    </form>
+  </main>
+
+  <script src="validate.js"></script>
+</body>
+</html>

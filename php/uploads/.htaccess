@@ -1,0 +1,3 @@
+# Never execute scripts placed in the uploads folder
+php_flag engine off
+Options -Indexes
